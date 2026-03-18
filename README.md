@@ -1,37 +1,50 @@
 # Smart Banking System
 
 ## Project Description
-The Smart Banking System is a console-based application that simulates real-world banking operations. It allows users to register, log in, and perform various banking activities such as depositing, withdrawing, and checking account balances. The system is designed to provide a user-friendly interface for managing bank accounts and transactions.
+Smart Banking System is a Java project that demonstrates real-world banking operations using Object-Oriented Programming concepts. The project now includes both a console workflow and a modern Swing-based GUI workflow.
 
 ## Features
 - User registration and login
 - Account management (savings and current accounts)
 - Deposit and withdrawal operations
 - Balance checking
-- Transaction history
-- Input validation for user inputs
+- Basic transaction tracking
+- Input validation and exception handling
+- GUI screens for login, registration, and dashboard
 
 ## Technologies Used
 - Java
-- Maven for project management
+- Java Swing (GUI)
 - Object-Oriented Programming principles
 
 ## OOP Concepts Applied
-- **Encapsulation**: Private variables in classes with public getters and setters to protect data.
-- **Inheritance**: SavingsAccount and CurrentAccount classes inherit from the Account class.
-- **Polymorphism**: Interface for transaction operations allows different implementations for various transaction types.
-- **Abstraction**: Use of interfaces and abstract classes to define common behaviors without exposing implementation details.
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
 
-## How to Run the Project
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Use Maven to build the project:
+## Project Structure
+- `src/main/java/com/banking/Main.java` (console entry)
+- `src/main/java/com/banking/gui/BankingGUI.java` (GUI entry)
+- `src/main/java/com/banking/models/*`
+- `src/main/java/com/banking/services/*`
+- `src/main/java/com/banking/exceptions/*`
+
+## How to Run
+1. Clone the repository.
+2. Open the project in VS Code/IntelliJ/Eclipse.
+3. Compile:
+   ```bash
+   javac -d target/classes -sourcepath src/main/java src/main/java/com/banking/exceptions/*.java src/main/java/com/banking/interfaces/*.java src/main/java/com/banking/models/*.java src/main/java/com/banking/utils/*.java src/main/java/com/banking/services/*.java src/main/java/com/banking/gui/*.java src/main/java/com/banking/Main.java
    ```
-   mvn clean install
+4. Run console version:
+   ```bash
+   java -cp target/classes com.banking.Main
    ```
-4. Run the application:
-   ```
-   mvn exec:java -Dexec.mainClass="com.banking.Main"
+5. Run GUI version:
+   ```bash
+   java -cp target/classes com.banking.gui.BankingGUI
    ```
 
-Enjoy managing your banking operations with the Smart Banking System!
+## Author
+Abdullah
